@@ -8,7 +8,12 @@ int totalValue() {
     }
     return summe;
 }
-bool operator >(Coinstack other) {
-    return totalValue() > other.totalValue();
+
+bool operator <=(Coinstack other) {
+    return totalValue() <= other.totalValue();   
+}
+
+bool operator >= (Coinstack other) {
+  return totalValue() >= other.totalValue();
 }
 }
