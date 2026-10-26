@@ -10,4 +10,8 @@ void main() {
 
     var stapelC = stapel1A + stapel1B;
     print(stapelC.coins);
+
+    var stapel1D = stapel1A - stapel1B;
+    print(stapel1D?.coins);
 }
+

@@ -31,4 +31,15 @@ bool operator == (Object other) {
 CoinStack operator +(CoinStack other) {
     return CoinStack([...coins,...other.coins]);
 }
+
+CoinStack? operator -(CoinStack other) {
+    List<int> rest = [...coins];
+    for (int coin in other.coins) {
+        if (!rest.contains(coin)) {
+            return null;
+        }
+        rest.remove(coin);
+    }
+    return CoinStack(rest);
+}
 }
