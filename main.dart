@@ -7,4 +7,7 @@ void main() {
     print(stapel1A.totalValue());
     print(stapel1B.totalValue());
     print(stapel1A == stapel1B);
+
+    var stapelC = stapel1A + stapel1B;
+    print(stapelC.coins);
 }
