@@ -1,6 +1,6 @@
-class Coinstack {
+class CoinStack {
 List<int> coins;
-Coinstack(this.coins);
+CoinStack(this.coins);
 int totalValue() {
     int summe = 0;
     for (int coin in coins) {
@@ -9,11 +9,17 @@ int totalValue() {
     return summe;
 }
 
-bool operator <=(Coinstack other) {
+bool operator <=(CoinStack other) {
     return totalValue() <= other.totalValue();   
 }
 
-bool operator >= (Coinstack other) {
-  return totalValue() >= other.totalValue();
+bool operator < (CoinStack other) {
+    return totalValue() < other.totalValue();
+}
+bool operator >(CoinStack other) {
+    return totalValue() > other.totalValue();
+}
+bool operator >=(CoinStack other) {
+    return totalValue() >= other.totalValue();  
 }
 }
