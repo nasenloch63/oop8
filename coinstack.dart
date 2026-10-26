@@ -27,4 +27,8 @@ bool operator == (Object other) {
         return totalValue() == other.totalValue();
     } return false;
 } 
+
+CoinStack operator +(CoinStack other) {
+    return CoinStack([...coins,...other.coins]);
+}
 }
