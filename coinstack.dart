@@ -16,10 +16,15 @@ bool operator <=(CoinStack other) {
 bool operator < (CoinStack other) {
     return totalValue() < other.totalValue();
 }
-bool operator >(CoinStack other) {
+bool operator > (CoinStack other) {
     return totalValue() > other.totalValue();
 }
-bool operator >=(CoinStack other) {
+bool operator >= (CoinStack other) {
     return totalValue() >= other.totalValue();  
 }
+bool operator == (Object other) {
+    if (other is CoinStack) {
+        return totalValue() == other.totalValue();
+    } return false;
+} 
 }
